@@ -5,14 +5,10 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        int target1 = 12441;
-        System.out.println("Test 2: " + String.valueOf(Palindrome.isPalindrome(target1)));
-
-        int target2 = -121;
-        System.out.println("Test 2: " + String.valueOf(Palindrome.isPalindrome(target2)));
-
-        int target3 = 1221;
-        System.out.println("Test 2: " + String.valueOf(Palindrome.isPalindrome(target3)));
+        String s = "{{";
+        ValidParenthess validParenthess = new ValidParenthess();
+        boolean result = validParenthess.isValid(s);
+        System.out.println("Is the string \"" + s + "\" valid? " + result);
 
 
     }
