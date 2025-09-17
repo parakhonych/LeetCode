@@ -46,27 +46,13 @@ import java.util.Arrays;
 
 public class RemoveDuplicate {
     public int removeDuplicates(int[] nums) {
-        int k = 0;
-        int [] unique_numbers = new int [nums.length];
-        Arrays.fill(unique_numbers, 101);
+        int k = 1;
 
-        for(int i=0;i<nums.length;i++) {
-            boolean exists  =false;
-            for (int j = 0; j < unique_numbers.length; j++) {
-                if(unique_numbers[j]==nums[i]){
-                    exists = true;
-                    break;
-                }
-
-            }
-            if (!exists){
-                unique_numbers[k] = nums[i];
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[k - 1]) {
+                nums[k] = nums[i];
                 k++;
             }
-        }
-
-        for(int i = 0; i<k; i++){
-            nums[i] = unique_numbers[i];
         }
 
         return k;
