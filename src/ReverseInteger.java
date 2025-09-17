@@ -31,27 +31,27 @@ Constraints:
 public class ReverseInteger {
     public int reverse(int x) {
         boolean signed = false;
-        if (x<0){
+        if (x < 0) {
             signed = true;
-            x = x *(-1);
+            x = x * (-1);
         }
 
-        int k=0;
-        while (x>0){
+        int k = 0;
+        while (x > 0) {
             int digit = x % 10;
-           int a = x%10;
-           x = (int)(x/10);
+            int a = x % 10;
+            x = (int) (x / 10);
             if (k > Integer.MAX_VALUE / 10 || (k == Integer.MAX_VALUE / 10 && digit > 7)) {
                 return 0;
             }
             if (k < Integer.MIN_VALUE / 10 || (k == Integer.MIN_VALUE / 10 && digit < -8)) {
                 return 0;
             }
-           k = (k*10) + a;
+            k = (k * 10) + a;
         }
 
-        if(signed){
-            return k*-1;
+        if (signed) {
+            return k * -1;
         }
         return k;
     }
