@@ -39,7 +39,6 @@ public class ReverseInteger {
         int k = 0;
         while (x > 0) {
             int digit = x % 10;
-            int a = x % 10;
             x = (int) (x / 10);
             if (k > Integer.MAX_VALUE / 10 || (k == Integer.MAX_VALUE / 10 && digit > 7)) {
                 return 0;
@@ -47,7 +46,7 @@ public class ReverseInteger {
             if (k < Integer.MIN_VALUE / 10 || (k == Integer.MIN_VALUE / 10 && digit < -8)) {
                 return 0;
             }
-            k = (k * 10) + a;
+            k = (k * 10) + digit;
         }
 
         if (signed) {
