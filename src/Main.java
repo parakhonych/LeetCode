@@ -1,17 +1,14 @@
-
 import java.util.Arrays;
-
 
 public class Main {
     public static void main(String[] args) {
+        int [] nums = {-1,0,4,4};
 
-        String a = "1010";
-        String b = "1011";
-        AddBinary addBinary = new AddBinary();
-        String result = addBinary.addBinary(a, b);
-        System.out.println(result); // Output: "10101"
-        
+        RemoveDuplicate rD = new RemoveDuplicate();
 
+        int k = rD.removeDuplicates(nums);
 
+        System.out.println("k = " + k);
+        System.out.println("nums = " + Arrays.toString(nums));
     }
 }
