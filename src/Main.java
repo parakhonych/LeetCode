@@ -2,13 +2,10 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int [] nums = {-1,0,4,4};
+        int x = -123;
 
-        RemoveDuplicate rD = new RemoveDuplicate();
+       ReverseInteger rI = new ReverseInteger();
 
-        int k = rD.removeDuplicates(nums);
-
-        System.out.println("k = " + k);
-        System.out.println("nums = " + Arrays.toString(nums));
+        System.out.println(rI.reverse(x));
     }
 }
